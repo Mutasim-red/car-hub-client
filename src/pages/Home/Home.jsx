@@ -4,6 +4,7 @@ import ContactForm from "../ContactUs/ContactForm";
 import AboutUs from "./AboutUs"
 import HomeBanner from "./HomeBanner";
 import OurVehicles from "./OurVehicles";
+import Teammates from "./Teammates";
 
 
 function Home(){
@@ -15,6 +16,7 @@ function Home(){
              <OurVehicles></OurVehicles>
              <AboutUs></AboutUs>
              <ContactForm></ContactForm>
+             <Teammates></Teammates>
         </div>
         <Footer></Footer>
         </div>

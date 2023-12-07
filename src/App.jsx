@@ -14,6 +14,7 @@ import AddReview from './pages/AddReview/AddReview';
 import VehicleDetails from './pages/ProductDetail/VehicleDetails';
 import UpdateProduct from './pages/UpdateProduct/UpdateProducts';
 import PostTeam from './pages/PostTeam/PostTeam';
+import Team from './pages/Team/Team';
 function App() {
   const router = createBrowserRouter([
     {
@@ -63,6 +64,13 @@ function App() {
       path: "/add-teammate",
       element: <PostTeam/>
     },
+    {
+      path:"/team",
+      element:<Team />,
+      loader: function(){
+        return fetch(`http://localhost:3000/all-teammates`);
+    }
+  },
   ]);
 
   return (
