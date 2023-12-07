@@ -73,7 +73,7 @@ function AddProductForm() {
           placeholder="Vehicle Description"
         ></textarea>
         <div className="flex justify-center">
-          <input type="submit" className="btn btn-primary"></input>
+          <button type="submit" className="btn btn-primary">Submit</button>
         </div>
       </form>
     </div>

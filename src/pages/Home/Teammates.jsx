@@ -22,16 +22,16 @@ function Teammates() {
             className="card lg:card-side bg-base-100 shadow-xl"
           >
             <figure className="md:w-1/2">
-              <img
-                src="{teammate.photo}"
-              />
+              <img src="{teammate.photo}" />
             </figure>
             <div className="card-body md:w-1/2">
               <h2 className="card-title font-bold">{teammate?.fullName}</h2>
               <p className="text-sm">{teammate?.position}</p>
               <p>{teammate?.message}</p>
               <div className="card-actions justify-end">
-                <button className="btn btn-outline btn-sm">{teammate?.email}</button>
+                <button className="btn btn-outline btn-sm">
+                  {teammate?.email}
+                </button>
               </div>
             </div>
           </div>

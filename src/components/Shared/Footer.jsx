@@ -4,7 +4,7 @@ import { MdManageHistory } from "react-icons/md";
 import { Link } from "react-router-dom";
 function Footer(){
     return(
-    <div className="bg-blue-600">
+    <div className="bg-blue-700">
         <footer className="max-w-6xl mx-auto footer grid-cols-1 md:grid-cols-3 p-10 text-white">
   <nav>
     <div className="h-full flex items-center">

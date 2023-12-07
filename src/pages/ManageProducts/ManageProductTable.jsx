@@ -4,17 +4,19 @@ import { Link, useLoaderData } from "react-router-dom";
 function ManageProductsTable() {
   //get all the fetched data
   const data = useLoaderData();
-  const [vehicles,setVehicles] = useState(data);
+  const [vehicles, setVehicles] = useState(data);
   //function for handling the delete vehicle
   function handleDeleteVehicle(vehicleId) {
     fetch(`http://localhost:3000/delete-by-id/${vehicleId}`, {
       method: "DELETE",
     })
       .then((res) => res.json())
-      .then((data) =>{
-        if(data.deletedCount>0){
-         const otherVehicle = vehicles?.filter(vehicle => vehicle._id != vehicleId)
-        setVehicles(otherVehicle)
+      .then((data) => {
+        if (data.deletedCount > 0) {
+          const otherVehicle = vehicles?.filter(
+            (vehicle) => vehicle._id != vehicleId
+          );
+          setVehicles(otherVehicle);
         }
       });
   }

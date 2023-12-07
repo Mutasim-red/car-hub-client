@@ -19,7 +19,7 @@ function UpdateProductForm() {
     };
     //Now make a PUT request to the server from updating this vehicleobject
     console.log(updatedvehicle);
-    fetch(`http://localhost:3000/update-by-id/${vehicle._id}`, {
+    fetch(`http://localhost:3000/update-by-id/${vehicle?._id}`, {
       method:"PUT",
       Headers: {
         "Content-type": "application/json",
@@ -74,7 +74,7 @@ function UpdateProductForm() {
         placeholder="Vehicle Description"
       ></textarea>
       <div className="flex justify-center">
-        <input type="submit" className="btn btn-primary"></input>
+        <button type="submit" className="btn btn-primary">Submit</button>
       </div>
     </form>
   );

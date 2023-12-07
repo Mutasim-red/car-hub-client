@@ -18,7 +18,10 @@ function OurVehicles() {
           {/* cards of all available vehicles */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {vehicles?.map((vehicle) => (
-              <SingleVehicleCard key={vehicle._id} vehicle={vehicle}></SingleVehicleCard>
+              <SingleVehicleCard
+                key={vehicle._id}
+                vehicle={vehicle}
+              ></SingleVehicleCard>
             ))}
           </div>
         </div>
