@@ -19,15 +19,20 @@ function ManageProductsTable() {
         <tbody>
           {vehicles?.map((vehicle) => (
             <tr key={vehicle._id}>
-            <td>{vehicle.make}</td>
-            <td>{vehicle.model}</td>
-            <td>{vehicle.rent}</td>
-            <td>
-             <Link to={`/vehicle/${vehicle?._id}`}><button className="btn btn-success">D</button></Link>
-              <button className="btn btn-outline">U</button>
-              <button className="btn btn-outline">U</button>
-            </td>
-          </tr>
+              <td>{vehicle.make}</td>
+              <td>{vehicle.model}</td>
+              <td>{vehicle.rent}</td>
+              <td>
+                <Link to={`/vehicle/${vehicle?._id}`}>
+                  <button className="btn btn-success">D</button>
+                </Link>
+                <button className="btn btn-warning">X</button>
+                <Link to={`/update-vehicle/${vehicle?._id}`}>
+                  {" "}
+                  <button className="btn btn-outline">U</button>
+                </Link>
+              </td>
+            </tr>
           ))}
         </tbody>
       </table>

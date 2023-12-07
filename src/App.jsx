@@ -12,6 +12,7 @@ import ManageProducts from './pages/ManageProducts/ManageProducts';
 import AddProduct from './pages/AddProduct/AddProducts';
 import AddReview from './pages/AddReview/AddReview';
 import VehicleDetails from './pages/ProductDetail/VehicleDetails';
+import UpdateProduct from './pages/UpdateProduct/UpdateProducts';
 function App() {
   const router = createBrowserRouter([
     {
@@ -46,7 +47,14 @@ function App() {
       loader: function({params})
       {
         
-        return fetch(`http://localhost:3000/vehicle/${params.id}`)
+        return fetch(`http://localhost:3000/vehicle/${params.id}`);
+      }
+    },
+    {
+      path: "/update-vehicle/:id",
+      element: <UpdateProduct></UpdateProduct>,
+      loader: function({params}){
+        return fetch(`http://localhost:3000/vehicle/${params.id}`);
       }
     }
   ]);
