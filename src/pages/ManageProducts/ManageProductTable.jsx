@@ -19,14 +19,14 @@ function ManageProductsTable() {
         <tbody>
           {vehicles?.map((vehicle) => (
             <tr key={vehicle._id}>
-              <td>{vehicle.make}</td>
-              <td>{vehicle.model}</td>
-              <td>{vehicle.rent}</td>
-              <td>
-                <button className="btn btn-warning">X</button>
-                <button className="btn btn-outline">U</button>
-              </td>
-            </tr>
+            <td>{vehicle.make}</td>
+            <td>{vehicle.model}</td>
+            <td>{vehicle.rent}</td>
+            <td>
+              <button className="btn btn-warning">X</button>
+              <button className="btn btn-outline">U</button>
+            </td>
+          </tr>
           ))}
         </tbody>
       </table>
